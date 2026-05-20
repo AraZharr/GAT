@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CarX Drift Racing 3 Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400&amp;family=JetBrains+Mono:wght@600&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e2e2e5",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#2f3133",
+                        "tertiary-fixed-dim": "#bac8da",
+                        "tertiary": "#bac8da",
+                        "on-surface-variant": "#e7bdb6",
+                        "surface-container-lowest": "#0c0e10",
+                        "on-primary-fixed": "#410000",
+                        "primary-container": "#e62117",
+                        "on-tertiary-container": "#fffeff",
+                        "surface-container-high": "#282a2c",
+                        "secondary": "#ffb68b",
+                        "on-primary-container": "#fffeff",
+                        "background": "#121416",
+                        "secondary-container": "#e57011",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "surface-container-low": "#1a1c1e",
+                        "on-tertiary-fixed": "#0f1d2a",
+                        "on-secondary-fixed": "#321200",
+                        "surface-tint": "#ffb4a8",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-secondary-container": "#481d00",
+                        "surface-variant": "#333537",
+                        "inverse-primary": "#c00003",
+                        "on-surface": "#e2e2e5",
+                        "tertiary-container": "#697788",
+                        "outline": "#ae8882",
+                        "surface": "#121416",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#930002",
+                        "secondary-fixed": "#ffdbc8",
+                        "tertiary-fixed": "#d6e4f7",
+                        "outline-variant": "#5e3f3b",
+                        "surface-bright": "#37393b",
+                        "on-primary": "#690001",
+                        "primary": "#ffb4a8",
+                        "inverse-surface": "#e2e2e5",
+                        "on-tertiary-fixed-variant": "#3b4857",
+                        "surface-container": "#1e2022",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#121416",
+                        "on-secondary-fixed-variant": "#753400",
+                        "surface-container-highest": "#333537",
+                        "primary-fixed": "#ffdad5",
+                        "on-tertiary": "#243240",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#522300"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "unit": "4px",
+                        "gutter-md": "24px",
+                        "margin-edge": "32px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Sora"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Sora"],
+                        "body-md": ["Hanken Grotesk"],
+                        "stats-display": ["Sora"],
+                        "headline-xl": ["Sora"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "stats-display": ["20px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(40, 42, 44, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container font-body-md">
+<!-- Top Navigation (Desktop) -->
+<nav class="hidden md:flex bg-background/80 backdrop-blur-md fixed top-0 w-full z-[100] h-16 border-b border-white/10 shadow-2xl transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-edge max-w-container-max mx-auto w-full">
+<div class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-surface">GARAGE</div>
+<div class="flex gap-8 items-center h-full">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors hover:bg-white/5 px-2 py-1 rounded" href="#">Divisions</a>
+<div class="relative group h-full flex items-center">
+<a class="font-label-caps text-label-caps uppercase text-primary border-b-2 border-primary pb-1 h-full flex items-center hover:bg-white/5 px-2 gap-1" href="#">
+    Gallery
+    <span class="material-symbols-outlined text-[16px] leading-none">keyboard_arrow_down</span>
+</a>
+<div class="absolute top-full left-0 mt-1 w-48 bg-surface-container/80 backdrop-blur-xl border border-white/10 rounded-xl py-3 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-[120] shadow-2xl">
+<a class="block px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-white/5 font-label-caps text-label-caps transition-colors" href="#assetto-corsa">Assetto Corsa</a>
+<a class="block px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-white/5 font-label-caps text-label-caps transition-colors" href="#cxdr2">CXDR2</a>
+<a class="block px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-white/5 font-label-caps text-label-caps transition-colors" href="#cxdr3">CXDR3</a>
+</div>
+</div>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors hover:bg-white/5 px-2 py-1 rounded" href="#">Stats</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors hover:bg-white/5 px-2 py-1 rounded" href="#">Recruitment</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase px-6 py-2 rounded hover:skew-x-[-10deg] hover:translate-x-1 transition-transform">Join Club</button>
+<button class="text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Side Navigation (Mobile) -->
+<aside class="md:hidden bg-surface-container-high fixed inset-y-0 left-0 w-72 z-[110] shadow-2xl shadow-black flex flex-col h-full py-6 transform -translate-x-full transition-transform duration-300" id="mobile-nav">
+<div class="px-6 mb-8 flex justify-between items-center">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">GARAGE</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Automotive Tuner</p>
+</div>
+<button class="text-on-surface" onclick="document.getElementById('mobile-nav').classList.add('-translate-x-full')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex-grow flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-on-surface mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="text-on-surface-variant hover:text-on-surface mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">settings_input_component</span> Divisions
+            </a>
+<div class="mx-2 my-1">
+    <!-- Gallery Button -->
+    <button
+        id="gallery-btn"
+        type="button"
+        class="w-full bg-primary-container text-on-primary-container rounded-xl px-4 py-3 flex items-center gap-3 transform hover:translate-x-1 duration-200 shadow-lg"
+    >
+        <span class="material-symbols-outlined">photo_library</span>
+        Gallery
+
+        <span
+            id="gallery-arrow"
+            class="material-symbols-outlined ml-auto transition-transform duration-300"
+        >
+            expand_more
+        </span>
+    </button>
+
+    <!-- Dropdown -->
+    <div id="gallery-menu" class="hidden ml-6 mt-2 flex flex-col gap-2">
+        <a href="#assetto"
+           class="px-4 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-white/5 transition-all">
+            Assetto Corsa
+        </a>
+
+        <a href="#carx2"
+           class="px-4 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-white/5 transition-all">
+            CarX Drift Racing 2
+        </a>
+
+        <a href="#carx3"
+           class="px-4 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-white/5 transition-all">
+            CarX Drift Racing 3
+        </a>
+    </div>
+</div>
+<a class="text-on-surface-variant hover:text-on-surface mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">speed</span> Tuning Stats
+            </a>
+<a class="text-on-surface-variant hover:text-on-surface mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined">assignment_ind</span> Apply Now
+            </a>
+</div>
+<div class="mt-auto px-4 pt-4 border-t border-outline-variant">
+<button class="w-full bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase py-3 rounded mb-4 hover:skew-x-[-5deg] transition-transform">Recruitment Open</button>
+<div class="flex justify-center gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">forum</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">help</span></a>
+</div>
+</div>
+</aside>
+
+
+<script>
+const galleryBtn = document.getElementById("gallery-btn");
+const galleryMenu = document.getElementById("gallery-menu");
+const galleryArrow = document.getElementById("gallery-arrow");
+
+galleryBtn.addEventListener("click", function () {
+    galleryMenu.classList.toggle("hidden");
+    galleryArrow.classList.toggle("rotate-180");
+});
+</script>
+
+
+<!-- Mobile Header Trigger -->
+<header class="md:hidden flex justify-between items-center p-4 bg-background border-b border-white/10 sticky top-0 z-[90]">
+<div class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">GARAGE</div>
+<button class="text-on-surface" onclick="document.getElementById('mobile-nav').classList.remove('-translate-x-full')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-grow pt-8 md:pt-24 px-margin-edge max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-12 border-b border-white/10 pb-8 relative">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/20 to-transparent opacity-50 blur-3xl -z-10 pointer-events-none"></div>
+<h1 class="font-headline-xl text-headline-xl mb-4 text-on-surface flex items-center gap-4">
+                CarX Drift Racing 3 Gallery
+                <span class="bg-surface-variant text-on-surface font-label-caps text-label-caps px-3 py-1 rounded border border-white/10 uppercase tracking-widest text-sm align-middle mt-2">Active</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Explore the finest builds, tightest tandems, and rawest moments from our community. High-performance aesthetic meets precision tuning.</p>
+<div class="mt-8 flex gap-4">
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase px-8 py-3 rounded shadow-lg shadow-black/50 hover:skew-x-[-10deg] hover:translate-x-1 transition-transform border border-red-500/50">Join Division</button>
+<button class="glass-panel text-on-surface font-label-caps text-label-caps uppercase px-8 py-3 rounded hover:bg-white/5 transition-colors">Submit Build</button>
+</div>
+</div>
+<!-- Gallery Grid -->
+<div class="masonry-grid mb-16">
+<!-- Item 1: Wide Action Shot -->
+<div class="masonry-item relative group rounded-lg overflow-hidden glass-panel">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A wide angle shot of two highly modified drift cars engaged in a tight tandem drift around a sharp corner. Thick white tire smoke billows from the rear wheels, contrasting against the dark asphalt track." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuLVU6h9uYETni_qRDb5dfdKt7J3FFetn0OnIkWla5PuGYz3TgQxTWjn1D6sPqIjcI1Mk_gLjcw8aoUXWXmPxeT-3WhBTq7FkbEt0uUOzu8CEDhOQq2mcFvDNa5pLStjP3L9hUgQSy2GSfj5iRsGih9Y4J4ASFVhlxZ0TaFXFsG4QxbTyJkgQFRAVlP-hEuj215S2JbJ3gB2RKC_WKdSIkZ6VoDV6-sWeyJBvuwkBWX5n9deXfdL2KcYmwcjVbz9V1hrJABUwND9Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-primary mb-2">Multiplayer Event</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Tandem Kings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Setup: Max Angle Lead</p>
+</div>
+</div>
+<!-- Item 2: Engine Build -->
+<div class="masonry-item relative group rounded-lg overflow-hidden glass-panel">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A close up shot detailing the complex engine bay of a professional drift car. Intricate piping, a massive turbocharger, and red anodized fittings are visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvTWRjV_QxexdpnKMi66QFTK2uxs80eMmq4hhw2QrD38e4zyfY_PDrzgZPVuxXUmRfRYUADfICnhVc1UrfoFpTiNXRwzmF6_upj1e9oAaz7UXF90qez1FLj_iIIPQw6Vk_HBofzPyk0Zq-LcFOvNgBkvjgFGKAm2HOjv4jVBCGbuEbXQQyZTjeMC9kxIEG25IDTT9HgtFn7euq8Z10DMa7nALPuOGY8hNTy327KfN7cnvMo3skq6V1KLIR4Zzy0Y7TTKF3t7LBvPc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-primary mb-2">Pro Tier Build</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">2JZ GTE Swap</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Power: 1050 HP / Meta Config</p>
+</div>
+</div>
+<!-- Item 3: Component Detail -->
+<div class="masonry-item relative group rounded-lg overflow-hidden glass-panel">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A focused shot on a highly stylized forged alloy wheel of a drift car, showing a massive multi-piston brake caliper painted in racing red." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoTvU7o8TJv5ZzU2I-mdkFWjwbxXcVjNRRP9F27_iJbc_jJ6ZiI_NojLxT9nfJe76R5gsiT1gf0dpyFN9RdDVNTd6VBlxZP0iOIO83WCxnRgAHIE5xWdj-h_b6ej5dNgJrg5fE7NXLWCInkgakWkJOxOEQlT0A1JfcHJq1psPHz_U0ciWbL169_mWpL6PtLdqrnRzWHwEGiL-YZ0SGwVb3h4UAlCWWn4m5i7y5tEW_tMZvfimAZtg3au_nh6FdZY0WH3xtNbTIEGg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-primary mb-2">Component Gallery</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Forged Internals Kit</h3>
+</div>
+</div>
+<!-- Item 4: Night Event -->
+<div class="masonry-item relative group rounded-lg overflow-hidden glass-panel">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A wide panoramic shot of a crowded night-time drift event. Several cars line up at the starting line, illuminated by harsh overhead stadium lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBECEmqhYdqJ8k31RdtFxYXtsh6h3XcynpgD8QM_gpUD1hIcgvt-ICSp1gcP44QX-SdQ9ZKTr9ROmBRwZ6ZaUoromA4uEr1u4X063XTdIShnctKQI8QnBFXDo-lKikwi-3PQBLTNkPWcH_uhaAQgTgT5nmVTBco9JuJnCDLkWY0MkjrtXFB8BoWwf_pUwW4cEkfMtQFETWq1M594EPSohHtUy4maQJJSUli3gKBEZS69YGL9lxBnRiSSYZeMNJvvD2iceSqDnQdpWA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-label-caps text-primary mb-2">Division 1 Highlights</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Midnight Touge</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Location: Ebisu West</p>
+</div>
+</div>
+<!-- Item 5: Dashboard Focus -->
+<div class="masonry-item relative group rounded-lg overflow-hidden glass-panel">
+<div class="p-8 bg-surface-container-high/80 min-h-[300px] flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<h3 class="font-label-caps text-label-caps text-on-surface uppercase">Current Season Stats</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-on-surface-variant font-label-caps text-label-caps">Total Drifts</span>
+<span class="text-on-surface font-stats-display text-lg">24,590</span>
+</div>
+<div class="w-full bg-surface h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[100%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-on-surface-variant font-label-caps text-label-caps">Top Entry Speed</span>
+<span class="text-on-surface font-stats-display text-lg text-primary">185 km/h</span>
+</div>
+<div class="w-full bg-surface h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 glass-panel border border-white/20 text-on-surface py-3 rounded font-label-caps text-label-caps uppercase hover:bg-white/5 transition-colors">
+                        Full Leaderboard
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-8 mt-auto border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-edge max-w-container-max mx-auto gap-4">
+<div class="font-label-caps text-label-caps text-primary opacity-80 hover:opacity-100 transition-opacity">
+                © 2024 GARAGE AUTOMOTIVE TUNER. ALL RIGHTS RESERVED.
+            </div>
+<div class="flex gap-6 font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-on-surface hover:underline transition-all" href="#">Terms of Service</a>
+<a class="hover:text-on-surface hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="hover:text-on-surface hover:underline transition-all" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</body></html>
